@@ -1,0 +1,81 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .image-hidden {
+    display: none;
+}
+
+ .wp-block-to-eatin-bloque-toeatin {
+	background-color: white;
+	color: black;
+	padding: 2px;
+	width: 100%;
+}
+
+.my-gallery-block img {
+	max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+	height: auto; /* Mantiene la proporción de la imagen */
+  }
+
+  .my-gallery-modal img {
+	max-width: 100%; /* Asegura que las imágenes en el modal no sean demasiado grandes */
+	height: auto;
+  }
+
+.my-gallery-block:hover{
+	cursor: pointer;
+}
+
+.my-gallery-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small-images-container{
+	display: flex;
+	flex-direction: row;
+}
+
+.image-large {
+    flex: 2;
+    height: auto;
+}
+
+.image-small {
+    flex: 1;
+    height: auto;
+}
+
+.my-gallery-modal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.my-gallery-modal img {
+    width: 28%;
+}
+
+.container-text{
+	margin-top: 3rem;
+}
+
+.starsAndCat{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.categories{
+	font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.stars{
+	font-size: 2rem;
+	margin-top: -3rem;
+}

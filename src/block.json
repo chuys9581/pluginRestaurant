@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mycodedev/restaurant-toeatin",
+	"version": "0.1.0",
+	"title": "Restaurant - To Eat In",
+	"category": "widgets",
+	"icon": "store",
+	"description": "Este bloque añade la estructura para las entradas de los restaurants to eat in",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "restaurant-toeatin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+        "images": {
+            "type": "array",
+            "default": []
+        },
+        "text": {
+            "type": "string",
+            "default": ""
+        },
+        "categories": {
+            "type": "string",
+            "default": ""
+        },
+        "stars": {
+            "type": "number",
+            "default": 0
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+	"name": "restaurant-toeatin",
+	"version": "0.1.0",
+	"description": "Este bloque añade la estructura para las entradas de los restaurants to eat in",
+	"author": "Jesus Antonio Jimenez Jaimes",
+	"homepage": "https://melodious-griffin-d3095a.netlify.app/",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.14.0"
+	}
+}
