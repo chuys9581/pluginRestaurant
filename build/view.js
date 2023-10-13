@@ -1,1 +1,67 @@
-document.addEventListener("DOMContentLoaded",(e=>{const t=document.querySelectorAll(".my-gallery-block img"),l=document.createElement("div");l.style.display="none",l.style.position="fixed",l.style.zIndex="1",l.style.left="0",l.style.top="0",l.style.width="100%",l.style.height="100%",l.style.overflow="auto",l.style.backgroundColor="rgba(0,0,0,0.4)";const d=document.createElement("div");d.style.backgroundColor="#fefefe",d.style.margin="15% auto",d.style.padding="20px",d.style.border="1px solid #888",d.style.width="80%",d.style.textAlign="center",l.appendChild(d),document.body.appendChild(l),t.forEach((e=>{e.addEventListener("click",(()=>{d.innerHTML="",t.forEach((e=>{const t=document.createElement("img");t.src=e.src,t.alt=e.alt,t.style.width="30%",t.style.padding=".2rem",d.appendChild(t)})),l.style.display="block"}))})),window.onclick=e=>{e.target==l&&(l.style.display="none")}}));
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!*********************!*\
+  !*** ./src/view.js ***!
+  \*********************/
+document.addEventListener('DOMContentLoaded', event => {
+  // Selecciona todas las imágenes
+  const images = document.querySelectorAll('.my-gallery-block img');
+
+  // Crea el modal
+  const modal = document.createElement('div');
+  modal.style.display = 'none';
+  modal.style.position = 'fixed';
+  modal.style.zIndex = '1';
+  modal.style.left = '0';
+  modal.style.top = '0';
+  modal.style.width = '100%';
+  modal.style.height = '100%';
+  modal.style.overflow = 'auto';
+  modal.style.backgroundColor = 'rgba(0,0,0,0.4)';
+
+  // Crea el contenido del modal
+  const modalContent = document.createElement('div');
+  modalContent.style.backgroundColor = '#fefefe';
+  modalContent.style.margin = '15% auto';
+  modalContent.style.padding = '20px';
+  modalContent.style.border = '1px solid #888';
+  modalContent.style.width = '80%';
+  modalContent.style.textAlign = "center";
+
+  // Añade el contenido al modal
+  modal.appendChild(modalContent);
+
+  // Añade el modal al cuerpo del documento
+  document.body.appendChild(modal);
+
+  // Añade un controlador de eventos de clic a cada imagen
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      // Limpia el contenido del modal
+      modalContent.innerHTML = '';
+
+      // Añade todas las imágenes al contenido del modal
+      images.forEach(image => {
+        const imageInModal = document.createElement('img');
+        imageInModal.src = image.src;
+        imageInModal.alt = image.alt;
+        imageInModal.style.width = '30%';
+        imageInModal.style.padding = ".2rem";
+        modalContent.appendChild(imageInModal);
+      });
+
+      // Muestra el modal
+      modal.style.display = 'block';
+    });
+  });
+
+  // Cierra el modal cuando se hace clic fuera de la imagen
+  window.onclick = event => {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

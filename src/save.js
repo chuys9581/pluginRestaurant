@@ -8,7 +8,11 @@ const save = ({ attributes }) => {
         <div className="container-all">
             <div className="starsAndCat">
                 <div className="categories">
-                   {categories && <p>{categories}</p>}
+				{categories.includes('Las Vegas') ? (
+                         <a href="https://restaurantstoeatin.com/category/las-vegas/"style={{ textDecoration: 'none' }}>Las Vegas</a>
+                         ) : (
+                         <p>{categories}</p>
+                         )}
                 </div>
                 <div className="stars">
                    {stars > 0 && <p>{'⭐'.repeat(stars)}</p>}

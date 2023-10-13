@@ -5,6 +5,8 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital@1&display=swap');
+
  .image-hidden {
     display: none;
 }
@@ -62,6 +64,9 @@
 
 .container-text{
 	margin-top: 3rem;
+	margin-bottom: 3rem;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 400;
 }
 
 .starsAndCat{
@@ -77,5 +82,4 @@
 
 .stars{
 	font-size: 2rem;
-	margin-top: -3rem;
 }
