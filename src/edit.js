@@ -21,6 +21,10 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
         setAttributes( { text: newText } );
     };
 
+	useEffect(() => {
+        setAttributes({ starImage });
+    }, [starImage]);
+
 	const onSelectStarImage = (newValue) => {
         setAttributes({ starImage: newValue.url });
     };

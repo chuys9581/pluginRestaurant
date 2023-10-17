@@ -32,6 +32,10 @@
     "stars": {
       "type": "number",
       "default": 0
+    },
+    "starImage": {
+      "type": "string",
+      "default": ""
     }
   }
 }
