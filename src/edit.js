@@ -7,7 +7,8 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
     const [ isOpen, setOpen ] = useState( false );
     const images = attributes.images || [];
 	const text = attributes.text || '';
-    const stars = attributes.stars !== undefined ? attributes.stars : 0;
+	const starImage = attributes.starImage || '';
+    const stars = attributes.stars || 0;
 
     const openModal = () => setOpen( true );
     const closeModal = () => setOpen( false );
@@ -18,6 +19,10 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
 
 	const onChangeText = ( newText ) => {
         setAttributes( { text: newText } );
+    };
+
+	const onSelectStarImage = (newValue) => {
+        setAttributes({ starImage: newValue.url });
     };
 
     const onChangeStars = (newStars) => {
@@ -47,6 +52,16 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
 							</Button>
 						) }
 					/>
+					<MediaUpload
+                        onSelect={onSelectStarImage}
+                        allowedTypes={['image']}
+                        value={starImage}
+                        render={({ open }) => (
+                            <Button onClick={open}>
+                                Agregar imagen para las estrellas
+                            </Button>
+                        )}
+                    />
 				</MediaUploadCheck>
 				<div className='container-all'>
 					<div className='starsAndCat'>

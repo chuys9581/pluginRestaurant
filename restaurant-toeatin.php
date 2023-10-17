@@ -24,3 +24,4 @@ function mycodedev_restaurant_toeatin_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'mycodedev_restaurant_toeatin_block_init' );
+
