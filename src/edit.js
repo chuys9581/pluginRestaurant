@@ -7,7 +7,6 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
     const [ isOpen, setOpen ] = useState( false );
     const images = attributes.images || [];
 	const text = attributes.text || '';
-	const starImage = attributes.starImage || '';
     const stars = attributes.stars || 0;
 
     const openModal = () => setOpen( true );
@@ -22,12 +21,8 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
     };
 
 	useEffect(() => {
-        setAttributes({ starImage });
-    }, [starImage]);
-
-	const onSelectStarImage = (newValue) => {
-        setAttributes({ starImage: newValue.url });
-    };
+        setAttributes({ starImage: `wp-content/uploads/${stars}.png` });
+    }, [stars]);
 
     const onChangeStars = (newStars) => {
         setAttributes({ stars: parseInt(newStars) });
@@ -56,16 +51,6 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
 							</Button>
 						) }
 					/>
-					<MediaUpload
-                        onSelect={onSelectStarImage}
-                        allowedTypes={['image']}
-                        value={starImage}
-                        render={({ open }) => (
-                            <Button onClick={open}>
-                                Agregar imagen para las estrellas
-                            </Button>
-                        )}
-                    />
 				</MediaUploadCheck>
 				<div className='container-all'>
 					<div className='starsAndCat'>
