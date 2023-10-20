@@ -21,8 +21,8 @@ const Edit = ( { attributes, setAttributes, categories } ) => {
     };
 
 	useEffect(() => {
-        setAttributes({ starImage: `wp-content/uploads/${stars}.png` });
-    }, [stars]);
+		setAttributes({ starImage: `/wp-content/uploads/${stars}.png` });
+	}, [stars]);;
 
     const onChangeStars = (newStars) => {
         setAttributes({ stars: parseInt(newStars) });

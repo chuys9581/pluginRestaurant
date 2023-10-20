@@ -3,7 +3,7 @@ const save = ({ attributes }) => {
     const text = attributes.text || '';
     const categories = attributes.categories || '';
     const stars = attributes.stars || 0;
-    const starImage = `wp-content/uploads/${stars}.png`;
+    const starImage = `/wp-content/uploads/${stars}.png`;
 
 
     return (
